@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADES</title>
+</head>
+<body>
+    <H1>PAÍS DE ORIGEM</H1>
+    <label for="nacionalidade">Em qual país você nasceu?</label>
+    <input type="text" name="nacionalidade" id="nacionalidade">
+    <input type="button" value="VERIFICAR" onclick="verificar()">
+    <div id="resposta"></div>
+
+    <script>
+        function verificar() {
+            var nac = document.getElementById('nacionalidade').value.toLowerCase();
+            var res = document.getElementById('resposta');
+            
+            if (nac == 'brasil') {
+                res.innerHTML = `<p>Você é Brasileiro!</p>`
+                res.innerHTML += `<p>O melhor país deste mundo!</p>`
+            } else {
+                res.innerHTML = `<P>Você é estrangeiro!</P>`
+            }
+
+            
+        }
+    </script>
+</body>
+</html>
